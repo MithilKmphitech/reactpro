@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Counter from './Projects/Counter';
+import Home from './Home';
+import Onchange from './Onchange';
+import Crud from './Projects/Crud/Crud';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter basename='/'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/crud" element={<Crud />} />
+          <Route path="/onchange" element={<Onchange />} />
+        </Routes>
+
+      </BrowserRouter>
+    </>
   );
 }
 
