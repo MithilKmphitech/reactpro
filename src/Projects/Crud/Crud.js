@@ -64,6 +64,7 @@ const Crud = () => {
             },
         })
             .then((response) => {
+                console.log(".then  response", response);
                 console.log("sucess")
                 getData()
             });
