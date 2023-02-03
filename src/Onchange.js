@@ -1,33 +1,29 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
 function Onchange() {
-    const navigate=useNavigate();
-    const[formdata, setFormdata]=useState({
-        first:'',
-        last:'',
+    const navigate = useNavigate();
+    const [formdata, setFormdata] = useState({
+        first: '',
+        last: '',
     })
-
-    const[chekedbox,setChekedbox]=useState(false)
-    const chekbox=()=>{
+    const [chekedbox, setChekedbox] = useState(false)
+    const chekbox = () => {
         setChekedbox(!chekedbox)
     }
-    const handelsubmit=(e)=>{
+    const handelsubmit = (e) => {
         e.preventDefault()
-        if(chekedbox){
-            console.log("Onchange  formdata", formdata);
+        if (chekedbox) {
             navigate('/crud');
-        }else{
+        } else {
             console.log('Please Submit Data');
         }
     }
-  
-    const handleChange=(e)=>{   
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setFormdata({
             ...formdata,
             [name]: value,
-          });
+        });
     }
     return (
         <>
@@ -42,12 +38,12 @@ function Onchange() {
                             </div>
                             <div className='form_data'>
                                 <label htmlFor="">Last Name :</label>
-                                <p><input type="text" name={"last"}  value={formdata.last} onChange={handleChange} placeholder='Last Name' /></p>
+                                <p><input type="text" name={"last"} value={formdata.last} onChange={handleChange} placeholder='Last Name' /></p>
                             </div>
                             <div className='form_data'>
-                            <p><input type="checkbox" onChange={chekbox}  placeholder='Last Name' />I agree Term And Condition</p>
-                            <button type='submit'>Submit</button>
-                        </div>
+                                <p><input type="checkbox" onChange={chekbox} placeholder='Last Name' />I agree Term And Condition</p>
+                                <button type='submit'>Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -55,5 +51,4 @@ function Onchange() {
         </>
     )
 }
-
 export default Onchange;

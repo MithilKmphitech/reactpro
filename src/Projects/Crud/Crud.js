@@ -41,7 +41,6 @@ const Crud = () => {
             });
     }
     const nextPaggi = () => {
-
         setCurrentpage(currentpage + 1)
         axios({
             method: 'get',
@@ -64,8 +63,6 @@ const Crud = () => {
             },
         })
             .then((response) => {
-                console.log(".then  response", response);
-                console.log("sucess")
                 getData()
             });
     }
@@ -115,7 +112,6 @@ const Crud = () => {
             .then((response) => {
                 setFormdata(response.data);
             });
-
         if (formdata.firstName === '' || formdata.lastName === '' || formdata.email === '') {
             console.log('Fill the Data')
             return
