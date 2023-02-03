@@ -6,6 +6,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+:is(h1,h2,h3,h4,h5,h6,p){
+  margin: 0;
+}
 .container {
   max-width: 1300px;
   height: auto;
@@ -150,49 +153,47 @@ td {
   padding: 10px;
   font-size: 15px;
 }
-.card{
+.card {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-
 }
-.upload_btn{
+.upload_btn {
   opacity: 0;
   width: 150px;
   padding: 10px 5px;
   height: 30px;
-  
 }
-.main_video_btn{
+.main_video_btn {
   position: relative;
 }
-.upload_video{
+.upload_video {
   position: absolute;
   background-color: #fff;
   width: 150px;
   font-weight: bold;
   padding: 13px;
   top: 0;
-  border: 1px solid ;
+  border: 1px solid;
   z-index: -1;
 }
-.video_size{
+.video_size {
   max-width: 200px;
   margin: 10px 10px 0 10px;
   height: auto;
 }
-.closed_btn{
+.closed_btn {
   display: block;
 }
-.uploadvideo{
+.uploadvideo {
   position: relative;
   text-align: center;
 }
-.content_name{
+.content_name {
   margin: 0;
   font-weight: bold;
 }
-.uploadvideo button{
+.uploadvideo button {
   position: absolute;
   background-color: red;
   color: #fff;
@@ -205,41 +206,197 @@ td {
   top: 3px;
   right: 0;
   border: none;
-  
 }
 /* select Menu css */
 
-.select_menu{
+.select_menu {
   max-width: 300px;
   width: 100%;
-  border: 2px solid ;
-  padding:10px;
+  border: 2px solid;
+  padding: 10px;
   position: relative;
 }
-.select_option_group.show{
-  display: block !important; 
+.select_option_group.show {
+  display: block !important;
   position: absolute;
   left: 0;
-  margin: 20px 0 0 0 ;
+  margin: 20px 0 0 0;
   border: 1px solid;
   width: 100%;
   z-index: 999;
   background-color: #fff;
 }
-.selected_opt{
+.selected_opt {
   cursor: pointer;
 }
-.selected_opt h2{
+.selected_opt h2 {
   margin: 0;
 }
-.select_option{
+.select_option {
   cursor: pointer;
-  border-bottom:1px solid #80808033;
+  border-bottom: 1px solid #80808033;
   font-weight: bold;
   margin: 0;
   padding: 10px;
-  border-left: 3px solid  transparent;
+  border-left: 3px solid transparent;
 }
-.select_option:hover{
-  border-left: 3px solid ;
+.select_option:hover {
+  border-left: 3px solid;
+}
+
+/* New Css */
+
+.bg_task {
+  background-color: #333;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bg_task form {
+  background-color: #fff;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+}
+.bg_task form h2 {
+  text-align: center;
+  margin: 2px;
+}
+.bg_task button {
+  max-width: 200px;
+  width: 100%;
+  margin: 15px auto;
+  display: block;
+  padding: 8px;
+}
+.form_control {
+  width: 100%;
+}
+.form_control label {
+  display: block;
+  font-weight: 600;
+  margin: 0px 0;
+}
+.form_control input {
+  max-width: 470px;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 15px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.datatable {
+  width: 100%;
+}
+.imgset {
+  width: 200px;
+  height: 200px;
+}
+.post {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.capitlize {
+  text-transform: capitalize;
+}
+.profile_content img {
+  max-width: 50px;
+  border-radius: 50%;
+  height: auto;
+  margin: 0 10px;
+}
+.profile_content {
+  display: flex;
+  align-items: center;
+}
+.account_name {
+  font-weight: 600;
+  cursor: pointer;
+}
+.body_content {
+  padding: 15px;
+}
+.body_content img {
+  width: 100%;
+  height: 500px;
+}
+.individual_post {
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 1px 1px 4px 1px #0000009c;
+  margin: 40px 0;
+}
+.icon {
+  font-size: 25px;
+  margin: 5px 2px;
+}
+.d_set {
+  display: flex;
+}
+.like_set {
+  margin: 0;
+}
+.post_data h5 {
+  margin: 0;
+}
+header {
+  background-color: grey;
+  padding: 15px 10px;
+  color: #fff;
+}
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoutbtn{
+  all: unset;
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: darkblue;
+  max-width: 100px;
+  text-align: center;
+  padding: 5px 0;
+  width: 100%;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.logoutbtn:hover{
+  background-color: transparent;
+  color: #fff;
+}
+.profile_section{
+  padding: 10px 0;
+}
+.profile_section h2{
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid gray;
+}
+.profile_img{
+  margin:50px;
+  display: flex;
+}
+.profile_img img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.profile_description{
+  margin-left:50px ;
+}
+.total_post img{
+  max-width: 500px;
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
 }

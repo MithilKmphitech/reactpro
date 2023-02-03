@@ -5,12 +5,10 @@ const SelectMenu = (props) => {
     const selectClick = () => {
         setSelectshow(!selectshow);
     }
-
     const handleClick = (e) => {
         setSelectedopt(e.target.innerText)
-        console.log(e.view.history.length)
         setSelectshow(!selectshow);
-        props.handlechange(e,props.name)
+        props.handlechange(e, props.name)
     }
     return (
         <div className='select_menu'>

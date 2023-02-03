@@ -16,7 +16,7 @@ const Crud = () => {
     const getData = () => {
         axios({
             method: 'get',
-            url: `https://dummyapi.io/data/v1/user?page=${currentpage}&limit=10`,
+            url: ``,
             headers: {
                 "app-id": '63c4cf3aa7d40fea56baa7b1',
             },
