@@ -33,11 +33,11 @@ const Post = () => {
                 <section className='post'>
                     {getapidata && getapidata.map((dataone, index) => {
                         return (
-                            <div key={dataone.id} id={dataone.id} className='individual_post'>
+                            <div key={dataone.id} id={dataone.id} onClick={()=>handleClick(dataone.id)} className='individual_post'>
                                 <div className='header_content'>
                                     <div className='profile_content'>
                                         <img src={dataone.owner.picture} alt="" />
-                                        <p onClick={()=>handleClick(dataone.id)} className='account_name'><span className='capitlize'> {dataone.owner.title}.</span>&nbsp;{dataone.owner.firstName}&nbsp;{dataone.owner.lastName}</p>
+                                        <p className='account_name'><span className='capitlize'> {dataone.owner.title}.</span>&nbsp;{dataone.owner.firstName}&nbsp;{dataone.owner.lastName}</p>
                                     </div>
                                 </div>
                                 <div className='body_content'>

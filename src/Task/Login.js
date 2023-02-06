@@ -25,9 +25,10 @@ const Login = () => {
             }
         })
             .then((response) => {
-                localStorage.setItem("token", response.data.token);
                 if (response.data.token) {
+                    localStorage.setItem("token",JSON.stringify(response.data.token));
                     navigate('/dashboard')
+                    window.location.href='/dashboard';
                 }
             });
     }
